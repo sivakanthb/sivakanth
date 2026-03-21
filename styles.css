@@ -1,0 +1,265 @@
+/* ============================================================
+   Sivakanth Badigenchala — Professional Portfolio
+   ============================================================ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --text: #111827;
+  --text2: #4b5563;
+  --muted: #9ca3af;
+  --border: #e5e7eb;
+  --accent: #4f46e5;
+  --accent-light: #eef2ff;
+  --font: "Inter","Segoe UI",system-ui,-apple-system,sans-serif;
+  --radius: 12px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
+  --ease: 0.2s ease;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:960px;margin:0 auto;padding:0 24px;width:100%}
+
+/* ======================== NAV ======================== */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:0 24px;
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-brand{font-weight:800;font-size:1.1rem;color:var(--accent);text-decoration:none;letter-spacing:-0.02em}
+.nav-links{display:flex;gap:24px}
+.nav-links a{font-size:0.82rem;font-weight:500;color:var(--text2);text-decoration:none;transition:color var(--ease)}
+.nav-links a:hover{color:var(--accent)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:4px}
+.nav-toggle span{display:block;width:20px;height:2px;background:var(--text);border-radius:2px;transition:all var(--ease)}
+
+/* ======================== HERO (compact, horizontal) ======================== */
+.hero{
+  background:linear-gradient(135deg,#0f0f1a 0%,#1a1a2e 50%,#16213e 100%);
+  color:#fff;
+  padding:48px 24px 44px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:40px;
+}
+.hero-text{text-align:left}
+.hero-greeting{font-size:0.82rem;color:#64748b;font-weight:500;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.08em}
+.hero-name{font-size:2.2rem;font-weight:900;letter-spacing:-0.04em;margin-bottom:4px;background:linear-gradient(135deg,#fff 30%,#c7d2fe 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.15}
+.hero-title{font-size:1rem;font-weight:600;color:#a5b4fc;margin-bottom:6px}
+.hero-sub{font-size:0.8rem;color:#64748b;margin-bottom:16px;letter-spacing:0.01em}
+.hero-social{display:flex;gap:10px}
+.social-link{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.08);color:#94a3b8;text-decoration:none;border:1px solid rgba(255,255,255,0.08);transition:all var(--ease)}
+.social-link:hover{background:var(--accent);color:#fff;transform:translateY(-2px);border-color:var(--accent)}
+
+.hero-visual{display:flex;flex-direction:column;align-items:center;gap:16px}
+.avatar-ring{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#a78bfa,#818cf8);padding:3px;display:flex;align-items:center;justify-content:center}
+.avatar{width:100%;height:100%;border-radius:50%;background:#1a1a2e;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:800;color:#fff}
+.avatar-img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+
+.hero-stats{display:flex;gap:16px}
+.mini-stat{text-align:center}
+.mini-stat strong{display:block;font-size:1.2rem;font-weight:800;color:#fff}
+.mini-stat span{font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#64748b;font-weight:600}
+
+.hero-tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;max-width:240px}
+.hero-tag{font-size:0.62rem;font-weight:600;padding:4px 10px;border-radius:20px;background:rgba(255,255,255,0.07);color:#94a3b8;border:1px solid rgba(255,255,255,0.1);letter-spacing:0.02em;white-space:nowrap}
+.hero-tag.accent{background:rgba(79,70,229,0.2);color:#a5b4fc;border-color:rgba(79,70,229,0.35)}
+
+/* ======================== SECTIONS ======================== */
+.section{padding:48px 24px}
+.section.alt{background:var(--surface)}
+.section-title{font-size:1.35rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:24px;text-align:center}
+.section-title.left{text-align:left}
+.section-header{text-align:center;margin-bottom:28px}
+.section-header .section-title{margin-bottom:4px}
+.section-sub{font-size:0.82rem;color:var(--muted)}
+.sub-heading{font-size:0.88rem;font-weight:700;margin-bottom:12px;color:var(--text)}
+
+/* ======================== ABOUT ======================== */
+.about-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.about-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),#a78bfa,#818cf8)}
+.about-card p{font-size:0.9rem;color:var(--text2);line-height:1.7;margin-bottom:10px}
+.about-card p:last-child{margin-bottom:0}
+.about-lead{font-size:1.05rem!important;font-weight:600;color:var(--text)!important;margin-bottom:14px!important;letter-spacing:-0.01em}
+.about-journey{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:20px;padding-top:18px;border-top:1px solid var(--border);flex-wrap:wrap}
+.journey-phase{text-align:center;padding:10px 16px;border-radius:8px;background:var(--accent-light);border:1px solid transparent;transition:all var(--ease)}
+.journey-phase.active{background:var(--accent);border-color:var(--accent)}
+.journey-phase.active .journey-era,.journey-phase.active .journey-label{color:#fff}
+.journey-era{display:block;font-size:0.65rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.04em}
+.journey-label{display:block;font-size:0.72rem;font-weight:600;color:var(--text2);margin-top:2px}
+.journey-arrow{font-size:1rem;color:var(--muted);font-weight:700}
+
+/* ======================== EXPERIENCE CARDS ======================== */
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.exp-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:box-shadow var(--ease),border-color var(--ease);display:flex;flex-direction:column}
+.exp-card:hover{box-shadow:var(--shadow-lg);border-color:var(--accent)}
+.exp-card-head{display:flex;align-items:flex-start;gap:12px;padding:18px 16px;position:relative}
+.exp-logo{width:36px;height:36px;border-radius:8px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.9rem;flex-shrink:0}
+.exp-card[data-exp="adp"] .exp-logo{background:#d32f2f}
+.exp-card[data-exp="sra"] .exp-logo{background:#0277bd}
+.exp-card-head h3{font-size:0.88rem;font-weight:700;margin-bottom:1px}
+.exp-role{font-size:0.74rem;color:var(--text2);line-height:1.35}
+.exp-date{font-size:0.68rem;color:var(--muted);margin-top:2px}
+.badge{font-size:0.58rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:1px 7px;border-radius:20px;vertical-align:middle;margin-left:4px}
+.badge.green{background:#ecfdf5;color:#059669}
+.exp-summary{padding:0 16px 12px;font-size:0.82rem;color:var(--text2);line-height:1.6}
+.exp-summary p{margin:0}
+.exp-card-body{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.4s ease;padding:0 16px}
+.exp-card.active .exp-card-body{max-height:9999px;padding:0 16px 18px}
+.exp-card-body ul{list-style:none;padding:0;margin:0;border-top:1px solid var(--border);padding-top:12px}
+.exp-card-body li{font-size:0.78rem;color:var(--text2);line-height:1.5;padding-left:14px;position:relative;margin-bottom:5px}
+.exp-card-body li::before{content:"▸";position:absolute;left:0;color:var(--accent);font-weight:700}
+.exp-card-body li:last-child{margin-bottom:0}
+.exp-sub-heading{font-size:0.74rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.04em;margin-top:12px;margin-bottom:6px;padding-top:8px;border-top:1px dashed var(--border)}
+.exp-sub-heading:first-child{margin-top:0;padding-top:0;border-top:none}
+.exp-expand-btn{display:flex;align-items:center;justify-content:flex-end;gap:5px;width:100%;padding:8px 16px;border:none;background:transparent;cursor:pointer;font-size:0.72rem;font-weight:600;color:var(--accent);transition:all var(--ease);margin-top:auto;border-top:1px solid var(--border)}
+.exp-expand-btn:hover{background:var(--accent-light)}
+.exp-expand-icon{transition:transform 0.3s ease}
+.exp-card.active .exp-expand-icon{transform:rotate(180deg)}
+
+/* ======================== SECTION SUMMARY + EXPAND PATTERN ======================== */
+.section-summary-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);position:relative}
+.section-summary-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),#a78bfa,#818cf8)}
+.section-summary-card>p{font-size:0.88rem;color:var(--text2);line-height:1.7;padding:20px 24px 12px;margin:0}
+.section-expandable{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.4s ease;padding:0 24px}
+.section-summary-card.active .section-expandable{max-height:9999px;padding:12px 24px 18px}
+.section-expand-btn{display:flex;align-items:center;justify-content:flex-end;gap:5px;width:100%;padding:8px 24px;border:none;background:transparent;cursor:pointer;font-size:0.72rem;font-weight:600;color:var(--accent);transition:all var(--ease);border-top:1px solid var(--border)}
+.section-expand-btn:hover{background:var(--accent-light)}
+.section-expand-icon{transition:transform 0.3s ease}
+.section-summary-card.active .section-expand-icon{transform:rotate(180deg)}
+
+/* ======================== COLLAPSIBLE SECTIONS ======================== */
+.collapsible-toggle{cursor:pointer;user-select:none;position:relative;display:flex;align-items:center;justify-content:center;gap:8px}
+.toggle-icon{font-size:0.65rem;color:var(--muted);transition:transform 0.3s ease;display:inline-block}
+.collapsible-toggle:hover{color:var(--accent)}
+.collapsible{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+.collapsible.open{max-height:1200px}
+
+/* ======================== TWO-COL ======================== */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+
+/* ======================== CHIPS ======================== */
+.chips-grid{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:0.72rem;font-weight:600;padding:5px 12px;border-radius:20px;background:var(--accent-light);color:var(--accent);border:1px solid transparent;transition:all var(--ease)}
+.chip:hover{border-color:var(--accent);transform:translateY(-1px)}
+.chip.tool{background:#f0fdf4;color:#166534}
+.chip.tool:hover{border-color:#16a34a}
+.chip.ai{background:#fef3c7;color:#92400e}
+.chip.ai:hover{border-color:#d97706}
+.chip.cert{background:#faf5ff;color:#7c3aed;font-weight:700}
+.chip.cert:hover{border-color:#7c3aed}
+
+/* ======================== CERTS ======================== */
+.cert-list{display:flex;flex-direction:column;gap:6px}
+.cert-item{font-size:0.82rem;font-weight:600;padding:8px 12px;background:var(--surface);border:1px solid var(--border);border-radius:8px;position:relative;padding-left:28px}
+.cert-item::before{content:"🏅";position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:0.85rem}
+
+/* ======================== APP CARDS ======================== */
+.app-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.app-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 20px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;position:relative;overflow:hidden;transition:box-shadow var(--ease),transform var(--ease),border-color var(--ease)}
+.app-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),#a78bfa);opacity:0;transition:opacity var(--ease)}
+.app-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);border-color:var(--accent)}
+.app-card:hover::before{opacity:1}
+.app-card-icon{font-size:2rem;line-height:1}
+.app-card-name{font-size:1.05rem;font-weight:700}
+.app-card-description{font-size:0.82rem;color:var(--text2);line-height:1.55;flex-grow:1}
+.app-card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:8px}
+.app-card-category{font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent);background:var(--accent-light);padding:3px 10px;border-radius:20px}
+.app-card-status{font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;padding:3px 10px;border-radius:20px}
+.app-card-status.live{color:#059669;background:#ecfdf5}
+.app-card-status.wip{color:#d97706;background:#fffbeb}
+.app-card-arrow{position:absolute;right:16px;top:24px;font-size:1rem;color:var(--muted);transition:color var(--ease),transform var(--ease)}
+.app-card:hover .app-card-arrow{color:var(--accent);transform:translateX(3px)}
+
+.view-all-wrap{text-align:center;margin-top:20px}
+.view-all-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 28px;border-radius:8px;font-size:0.85rem;font-weight:600;color:var(--accent);background:var(--accent-light);text-decoration:none;border:1px solid transparent;transition:all var(--ease)}
+.view-all-btn:hover{border-color:var(--accent);transform:translateY(-1px);box-shadow:var(--shadow)}
+
+.builder-story{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;margin-bottom:20px;position:relative;overflow:hidden}
+.builder-story::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#f59e0b,#ef4444,#8b5cf6)}
+.builder-story p{font-size:0.88rem;color:var(--text2);line-height:1.7;margin:0}
+.builder-story em{color:var(--text);font-style:italic}
+.builder-story strong{color:var(--text)}
+
+/* ======================== SPEAKING ======================== */
+.speaking-list{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.speaking-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;display:flex;align-items:flex-start;gap:14px;transition:box-shadow var(--ease)}
+.speaking-card:hover{box-shadow:var(--shadow)}
+.speaking-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px}
+.speaking-card h3{font-size:0.88rem;font-weight:700;margin-bottom:2px}
+.speaking-card p{font-size:0.78rem;color:var(--muted)}
+
+/* ======================== EDUCATION ======================== */
+.edu-list{display:flex;flex-direction:column;gap:12px}
+.edu-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 16px}
+.edu-card h3{font-size:0.88rem;font-weight:700;margin-bottom:4px}
+.edu-card p{font-size:0.78rem;color:var(--muted)}
+
+/* ======================== INTERESTS ======================== */
+.interests-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.interest{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 10px;display:flex;align-items:center;gap:8px;font-size:0.8rem;font-weight:600;color:var(--text2);transition:box-shadow var(--ease)}
+.interest:hover{box-shadow:var(--shadow)}
+.interest span{font-size:1.2rem}
+
+/* ======================== CONTACT ======================== */
+.contact-section{background:linear-gradient(135deg,#0f0f1a,#1a1a2e,#16213e);color:#fff;text-align:center}
+.contact-section .section-title{color:#fff}
+.contact-text{font-size:0.9rem;color:#94a3b8;max-width:520px;margin:0 auto 24px;line-height:1.6}
+.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.contact-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border-radius:8px;font-size:0.85rem;font-weight:600;text-decoration:none;transition:all var(--ease)}
+.contact-btn.primary{background:var(--accent);color:#fff}
+.contact-btn.primary:hover{background:#4338ca;transform:translateY(-1px)}
+.contact-btn.secondary{background:rgba(255,255,255,0.08);color:#cbd5e1;border:1px solid rgba(255,255,255,0.15)}
+.contact-btn.secondary:hover{background:rgba(255,255,255,0.15);transform:translateY(-1px)}
+
+/* ======================== FOOTER ======================== */
+.site-footer{text-align:center;padding:28px 24px;border-top:1px solid var(--border);font-size:0.78rem;color:var(--muted)}
+.hidden{display:none}
+.empty-state{text-align:center;padding:60px 24px;color:var(--muted)}
+
+/* ======================== PROJECTS PAGE ======================== */
+.projects-hero{padding-bottom:16px}
+.projects-page-title{font-size:1.6rem;font-weight:900;letter-spacing:-0.03em;text-align:center;margin-bottom:4px}
+.filter-bar{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:16px}
+.filter-btn{font-size:0.75rem;font-weight:600;padding:6px 16px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--text2);cursor:pointer;transition:all var(--ease)}
+.filter-btn:hover{border-color:var(--accent);color:var(--accent)}
+.filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.active-link{color:var(--accent) !important;font-weight:700 !important}
+
+/* ======================== RESPONSIVE ======================== */
+@media(max-width:768px){
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero-text{text-align:center}
+  .hero-social{justify-content:center}
+  .hero-visual{order:-1}
+  .nav-links{display:none;position:absolute;top:52px;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--border);flex-direction:column;padding:16px 24px;gap:12px}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .two-col{grid-template-columns:1fr}
+  .exp-grid{grid-template-columns:1fr}
+  .section{padding:36px 16px}
+  .hero{padding:36px 16px 32px}
+  .hero-name{font-size:1.8rem}
+  .timeline{padding-left:24px}
+  .about-journey{gap:4px}
+  .journey-phase{padding:6px 10px}
+  .journey-arrow{font-size:0.8rem}
+}
+
+@media(max-width:480px){
+  .hero-name{font-size:1.5rem}
+  .avatar-ring{width:72px;height:72px}
+  .avatar{font-size:1.3rem}
+  .app-grid{grid-template-columns:1fr}
+  .interests-grid{grid-template-columns:repeat(2,1fr)}
+  .container{padding:0 16px}
+}

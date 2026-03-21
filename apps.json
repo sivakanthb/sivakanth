@@ -1,0 +1,38 @@
+[
+  {
+    "name": "AiRISE",
+    "description": "AI Readiness, Implementation & Strategic Excellence — a framework for AI-first software delivery.",
+    "icon": "🚀",
+    "category": "AI Strategy & Governance",
+    "url": "https://airise.vercel.app",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "name": "AI Compass",
+    "description": "AI knowledge hub — curated tools, glossary, prompt library, trends and learning paths to navigate the AI ecosystem with confidence.",
+    "icon": "🧭",
+    "category": "AI Knowledge & Discovery",
+    "url": "https://myaicompass.vercel.app",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "name": "AIMorpheus",
+    "description": "Personalized AI learning platform — master artificial intelligence through guided, interactive journeys.",
+    "icon": "🧠",
+    "category": "AI Learning & Upskilling",
+    "url": "https://aimorpheus.vercel.app",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "name": "Sonora",
+    "description": "Interactive tool for detecting and learning flute scales, notes and finger positions.",
+    "icon": "🎵",
+    "category": "AI-Powered Creativity",
+    "url": "https://sonora-flute.vercel.app",
+    "status": "live",
+    "featured": false
+  }
+]
