@@ -34,5 +34,14 @@
     "url": "https://sonora-flute.vercel.app",
     "status": "live",
     "featured": false
+  },
+  {
+    "name": "E-GAME",
+    "description": "English Grammar Access Made Easy — interactive lessons, quizzes, and word games based on the book by R U Narasimham.",
+    "icon": "📖",
+    "category": "Education & Language",
+    "url": "https://e-game-web.vercel.app",
+    "status": "live",
+    "featured": true
   }
 ]
