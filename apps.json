@@ -43,5 +43,14 @@
     "url": "https://e-game-web.vercel.app",
     "status": "live",
     "featured": true
+  },
+  {
+    "name": "MyOctaves",
+    "description": "Weekly music discovery companion — find the perfect song, explore 70+ Indian music legends, and browse a musical almanac of birthdays, milestones & historic events.",
+    "icon": "🎶",
+    "category": "AI-Powered Creativity",
+    "url": "https://myoctaves.vercel.app",
+    "status": "live",
+    "featured": true
   }
 ]
