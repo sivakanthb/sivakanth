@@ -61,5 +61,14 @@
     "url": "https://playgamio.onrender.com",
     "status": "live",
     "featured": true
+  },
+  {
+    "name": "AI Vantage",
+    "description": "Personalized AI readiness assessment — discover your AI persona, get a 90-day action plan, and find your vantage point to navigate the AI era with confidence.",
+    "icon": "🔭",
+    "category": "AI Knowledge & Discovery",
+    "url": "https://myaivantage.vercel.app",
+    "status": "live",
+    "featured": true
   }
 ]
