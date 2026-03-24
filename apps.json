@@ -52,5 +52,14 @@
     "url": "https://myoctaves.vercel.app",
     "status": "live",
     "featured": true
+  },
+  {
+    "name": "Gamio",
+    "description": "The ultimate multiplayer party game — 10 games across 3 categories, real-time rooms, live leaderboards. Play anywhere with friends, no downloads needed.",
+    "icon": "🎮",
+    "category": "Gaming & Entertainment",
+    "url": "https://playgamio.onrender.com",
+    "status": "live",
+    "featured": true
   }
 ]
