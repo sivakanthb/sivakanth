@@ -70,5 +70,14 @@
     "url": "https://myaivantage.vercel.app",
     "status": "live",
     "featured": true
+  },
+  {
+    "name": "ArtiKraft",
+    "description": "Interactive newsletter builder — craft beautiful newsletters with 11 templates, 19+ block types, drag-and-drop editing, and export to PDF, email or SharePoint.",
+    "icon": "✎",
+    "category": "AI-Powered Creativity",
+    "url": "https://artikraft.vercel.app",
+    "status": "live",
+    "featured": true
   }
 ]
