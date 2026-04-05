@@ -79,5 +79,14 @@
     "url": "https://artikraft.vercel.app",
     "status": "live",
     "featured": true
+  },
+  {
+    "name": "MusiciAIn",
+    "description": "Professional AI music composer — compose multi-layered music from 20 moods, explore 72 Indian ragas, craft beats with a pro sequencer, transcribe live instruments, and play a virtual keyboard with 5 instruments.",
+    "icon": "🎵",
+    "category": "AI-Powered Creativity",
+    "url": "https://musicain.vercel.app",
+    "status": "live",
+    "featured": true
   }
 ]
