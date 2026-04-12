@@ -1,6 +1,32 @@
 /* ============================================================
    Sivakanth Badigenchala — Portfolio Script
    ============================================================ */
+
+/* ─── Analytics Tracking (lightweight, non-blocking) ─── */
+(function() {
+  if (location.pathname.includes('analytics')) return; // don't track admin page
+  function track(type, data) {
+    try {
+      fetch('/api/track', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type, ...data }),
+        keepalive: true
+      }).catch(function(){});
+    } catch(e) { /* silent */ }
+  }
+  // Track page view
+  track('pageview', { page: location.pathname || '/' });
+  // Track app card clicks (delegated)
+  document.addEventListener('click', function(e) {
+    var card = e.target.closest('.app-card');
+    if (card) {
+      var nameEl = card.querySelector('.app-card-name');
+      if (nameEl) track('click', { app: nameEl.textContent.trim() });
+    }
+  });
+})();
+
 (async function () {
   /* --- Mobile nav toggle --- */
   const toggle = document.getElementById("navToggle");
