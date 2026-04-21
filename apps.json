@@ -88,5 +88,14 @@
     "url": "https://musicain.vercel.app",
     "status": "live",
     "featured": true
+  },
+  {
+    "name": "vAIbe",
+    "description": "Weekly AI newsletter — curated insights, trends and practical takeaways delivered every Friday.",
+    "icon": "📰",
+    "category": "AI Knowledge & Discovery",
+    "url": "https://sivakanthb.github.io/vaibe-newsletter/",
+    "status": "live",
+    "featured": true
   }
 ]
